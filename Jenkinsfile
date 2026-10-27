@@ -15,8 +15,10 @@ pipeline {
         }
 
         stage('Deploy') {
-    steps {
-        bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" rm -f github-jenkins-demo'
-        bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" run -d --name github-jenkins-demo -p 5001:5000 github-jenkins-demo'
+            steps {
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" rm -f github-jenkins-demo'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" run -d --name github-jenkins-demo -p 5001:5000 github-jenkins-demo'
+            }
+        }
     }
 }
